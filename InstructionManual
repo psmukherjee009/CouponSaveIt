@@ -1,0 +1,57 @@
+DB Schema
+There are 3 main DB tables
+1. CookieEmailMap -- As the name suggests, it contains the mapping of cookies to the owner email address
+2. CouponDB -- Contains all the created coupon button details
+3. GlobalCouponWallet4 -- Contains the mapping of email address and coupon id. Essentially it contains the information which user saved which coupon
+
+There are few other assistive DB like
+1. Create_SignUp -- Contains email of folks who are authorized to create coupon button
+2. PPP_Merchant_Id_Wepsite_Map -- Contains the mapping of PayPal Marchant Id and the Website associated with it. This table dictates which merchant website coupons can be created. 
+	Also if the merchant does not put in the PayPal Merchant Id then this table is used to the PayPal Merchant Id.
+	
+	
+Global Coupon Manager API Documentation
+
+Here is a list of what you can do:
+
+/CREATEBUTTON/
+    Registers your coupon in our DB and returns you a coupon save button.
+    The field details are in the Doc
+    The Oops :-
+    Duplicate CreateButton request will be ignored.
+    You need to signup through proper channels to be able to create coupon buttons
+/DELETEBUTTON/
+    Deletes a coupon from PayPal repository.
+    Input : pp_coupon_id=PAYPAL_COUPON_ID
+    Only the creator of the coupon can delete the coupon
+/EDITBUTTON/
+    Updates the part in createcoupon
+    Input : pp_coupon_id=PAYPAL_COUPON_ID
+    Only the creator of the coupon can edit the coupon
+/VIEWBUTTON/
+    View coupon details
+    Input : pp_coupon_id=PAYPAL_COUPON_ID
+    Only the creator of the coupon can view coupon details
+/SAVE/
+    Saves the coupon.
+    Use the PayPal Save Button Code to SAVE coupons here. The Oops :-
+    Duplicate save request will be ignored.
+/SECURESAVE/
+    Saves the secure coupon if a valid login token is present along with the SAVE API requirement
+/UNSAVE/
+    Unsaves a Coupon if pp_coupon_id is provided
+/SECUREUNSAVE/
+    Unsaves a Coupon if login_token and pp_coupon_id is provided
+/SIMILARCOUPONS?pp_coupon_id=jkhashjkhjas
+    Returns similar coupons. Needs pp_coupon_id to find similar coupons
+/RETRIEVE/MERCHANT_ID/
+    Retrieves saved Coupons.
+    MERCHANT_ID is optional and if set will show coupons saved of that merchant only.
+/SHOWAVAILABLE/MERCHANT_ID/
+    Shows all available coupons.
+    MERCHANT_ID is optional and if set will show coupons of that merchant only.
+/APPLYALLCOUPONS/MERCHANT_ID/?redirect_to=REDIRECT_URL
+    Retrieves saved Coupons for MERCHANT_ID and appends it to the REDIRECT_URL(Fully qualified i.e., like https://www.merchantpage.com/redirect in the form &coupon=coupon_code1&coupon=coupon_code2.
+/APPLYONECOUPON/MERCHANT_ID/?redirect_to=REDIRECT_URL
+    Retrieves saved Coupons for MERCHANT_ID and gives user a choice to select a coupon if there is more than one coupon available.
+    Appends the coupon to the REDIRECT_URL(Fully qualified i.e., like https://www.merchantpage.com/redirect in the form &coupon=coupon_code1

@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Create Coupon Button Form</title>
+		<style> body { margin : 2% 10% } table {width : 70%} </style>
+	</head>
+	<body>
+	<div id="header" class="notab">
+		<h1><a href="https://www.paypal.com/us/cgi-bin/webscr?cmd=_home"><img src="https://www.paypal.com/en_US/i/logo/paypal_logo.gif" alt="PayPal" border="0"></a></h1>
+	</div>
+	<p>
+	To Obtain the PayPal coupon save button <img src="http://www.parthamukherjee.com/images/CouponSaveIt/save_btn_REG.gif"> you need to fillout the following form and submit.</br> An example is shown below above the form</p>
+			<pre><code>
+		Merchant Name		Partha Enterprises
+		Merchant Website	www.parthamukherjee.com
+		PayPal Merchant Id	63278637826				 &lt!-- if you don’t know the PayPal merchant ID of the merchant, please keep this field empty --!&gt
+		Target Url		https://shopping.paypal.com/link?page=home&store=62480&sid=2&conversationId=1811252
+		Image Url		https://shopping.paypal.com/image?id=117285
+		Coupon Code		AFFI00001
+		Expiration Date		2012-08-30
+		Offer Title		August Month of Fun
+		Offer Type		5% OFF
+		Redemption Point	ONLINE
+		Keywords		J. Crew Apparal Pants Shirts
+		</pre></code>
+
+
+<table>
+<form action="http://www.parthamukherjee.com/cgi-perl/GlobalCouponManager4.cgi/CREATEBUTTON/" method="GET">
+<!-- Don't Edit above this line -->
+		<tr><td>Merchant Name		</td><td><input type="text" 		name="merchant_name" size="80"></td></tr>
+		<tr><td>Merchant Website 	</td><td><input type="text"		name="merchant_website" size="80"></td></tr>
+		<tr><td>PayPal Merchant Id 	</td><td><input type="text"		name="paypal_merchant_id" size="80"></td></tr>
+		<tr><td>Target Url		</td><td><input type="text"		name="target_url" size="80"></td></tr>
+		<tr><td>Image Url		</td><td><input type="text"		name="image_url" size="80"></td></tr>
+		<tr><td>Coupon Code		</td><td><input type="text"		name="coupon_code" size="80"></td></tr>
+		<tr><td>Expiration Date		</td><td><input type="text"		name="expiration_date" size="80"></td></tr>
+		<tr><td>Offer Title		</td><td><input type="text"		name="offer_title" size="80"></td></tr>
+		<tr><td>Offer Type		</td><td><input type="text"		name="offer_type" size="80"></td></tr>
+		<tr><td>Redemption Point	</td><td><input type="text"		name="redemption_point" size="80"></td></tr>
+		<tr><td>Keywords		</td><td><input type="text"		name="keywords" size="80"></td></tr>
+
+<!-- Don't Edit below this line -->
+		<tr><td></td><td><input type="image"	name="Create"	Create" src="http://www.parthamukherjee.com/images/CouponSaveIt/create_button.gif"></td></tr>
+	
+	</form>
+	</table>	
+	</body>
+</html>

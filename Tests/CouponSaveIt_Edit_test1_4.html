@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Edit Coupon Button Form</title>
+		<style> body { margin : 2% 10% } table {width : 70%} </style>
+	</head>
+	<body>
+	<div id="header" class="notab">
+		<h1><a href="https://www.paypal.com/us/cgi-bin/webscr?cmd=_home"><img src="https://www.paypal.com/en_US/i/logo/paypal_logo.gif" alt="PayPal" border="0"></a></h1>
+	</div>
+	<p>
+	To edit the PayPal coupon save button <img src="http://www.parthamukherjee.com/images/CouponSaveIt/save_btn_REG.gif"> referred content, you need to fillout the fields you want to change and submit.</br></br>
+	Mandatory Fields
+	<ul>
+	<li>PayPal Coupon Id (pp_coupon_id field) is mandatory</li>
+	<li>This PayPal user should be the creator of this coupon button</li>
+	</ul>
+	</p>	
+	<br />
+
+<table>
+<form action="http://www.parthamukherjee.com/cgi-perl/GlobalCouponManager4.cgi/EDITBUTTON/" method="GET">
+<!-- 
+<form action="http://www.parthamukherjee.com/cgi-perl/DisplayCookie.cgi" method="POST">
+-->
+<!-- Don't Edit above this line -->
+		<tr><td>PayPal Coupon Id	</td><td><input type="text" 		name="pp_coupon_id" size = "80"></td></tr>
+		<tr><td>Merchant Website	</td><td><input type="text" 		name="e_merchant_website" size = "80"></td></tr>
+		<tr><td>Merchant Name		</td><td><input type="text" 		name="e_merchant_name" size = "80"></td></tr>
+		<tr><td>PayPal Merchant Id 	</td><td><input type="text"		name="e_paypal_merchant_id" size = "80"></td></tr>
+		<tr><td>Target Url		</td><td><input type="text"		name="e_target_url" size = "80"></td></tr>
+		<tr><td>Image Url		</td><td><input type="text"		name="e_image_url" size = "80"></td></tr>
+		<tr><td>Coupon Code		</td><td><input type="text"		name="e_coupon_code" size = "80"></td></tr>
+		<tr><td>Expiration Date		</td><td><input type="text"		name="e_expiration_date" size = "80"></td></tr>
+		<tr><td>Offer Title		</td><td><input type="text"		name="e_offer_title" size = "80"></td></tr>
+		<tr><td>Offer Type		</td><td><input type="text"		name="e_offer_type" size = "80"></td></tr>
+		<tr><td>Redemption Point	</td><td><input type="text"		name="e_redemption_point" size = "80"></td></tr>
+		<tr><td>Keywords		</td><td><input type="text"		name="e_keywords" size = "80"></td></tr>
+
+<!-- Don't Edit below this line -->
+		<tr><td></td><td><input type="submit"	name="Edit"	value="Edit Coupon"></td></tr>
+	
+	</form>
+	</table>	
+	</body>
+</html>

@@ -1,0 +1,27 @@
+Application Name: 	CouponSaver
+App ID: 	a7bcbdb132a896d5557ae7a9c12ab0c2
+App Secret: 	bac1ca8f57db78d7
+
+my $app_name = "CouponSaver";
+my $app_id = "a7bcbdb132a896d5557ae7a9c12ab0c2";
+my $app_secret = "bac1ca8f57db78d7";
+
+
+Application Name: 	CouponSaver1
+App ID: 	dbc0b18ba53a753c9db0d76a0d74cd51
+App Secret: 	942b440f68123914
+
+my $app_name = "CouponSaver1";
+my $app_id = "dbc0b18ba53a753c9db0d76a0d74cd51";
+my $app_secret = "942b440f68123914";
+
+
+
+cmd = Basic (dbc0b18ba53a753c9db0d76a0d74cd51:942b440f68123914) https://www.paypal.com/webapps/auth/protocol/openidconnect/v1/tokenservice
+$VAR1 = { 'grant_type' => 'authorization_code', 'code' => '6LCXpk1HISBGCqmU7cRz911kgkMLoXOLMwfxj_Yfk57qVZovrnRYApYXg2VvmcEmrCSzqgs1FeIvaBL-qIFSY8KhyTevXxFcLzBpbyQ00mu5iya8HLS47x0kHqrXVeWpKtdAGgvKEF01I77n' }; 
+
+
+
+Application Name: 	CouponSaveIt
+App ID: 	9056c774e6c1f0f417da444d4c9eb70d
+App Secret: 	ab974323f8d89b75

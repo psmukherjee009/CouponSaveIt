@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Edit Coupon Button Form</title>
+		<style> body { margin : 2% 10% } table {width : 70%} </style>
+		<script	src="http://www.parthamukherjee.com/scripts/CouponSaveIt/CreateButton.js"></script>
+	</head>
+	<body>
+	<div id="header" class="notab">
+		<h1><a href="https://www.paypal.com/us/cgi-bin/webscr?cmd=_home"><img src="https://www.paypal.com/en_US/i/logo/paypal_logo.gif" alt="PayPal" border="0"></a></h1>
+	</div>
+	<a href="http://www.parthamukherjee.com/Overview.html">Back to Overview</a>
+	<font face=&quot;Arial&quot;&gt;&lt;font size=&quot;2&quot;&gt;&lt;>
+	<div id="content">
+<h3>Edit the Coupon</h3> 
+	<p>
+	If you are the owner of the coupon then you can call the API EDITCOUPON with the pp_coupon_id value and the values to be edited prefixed by "e_".<br />
+	A html link like this will work. You need to have only the fields which you want to modify.<br />
+	<pre><code>
+&lt!doctype html&gt
+&lthtml&gt
+	&lthead&gt
+		&ltmeta charset="utf-8"&gt
+		&lttitle&gtCreate PayPal Save Button&lt/title&gt
+	&lt/head&gt
+	&ltbody&gt
+		&ltform action="http://www.parthamukherjee.com/cgi-perl/GlobalCouponManager4.cgi/EDITBUTTON/" method="POST"&gt
+&lt!-- Don't Edit above this line --&gt
+
+		&lt;input type="hidden" name="pp_coupon_id"		value="PAYPAL_COUPON_ID"&gt;
+		&lt;input type="hidden" name="e_merchant_name"		value="THE_MERCHANT_NAME"&gt;
+		&lt;input type="hidden" name="e_merchant_website"	value="THE_MERCHANT_WEBSITE"&gt;
+		&lt;input type="hidden"	name="e_paypal_merchant_id"	value="PAYPAL_MERCHANT_ID"&gt;
+		&lt;input type="hidden"	name="e_target_url"		value="COUPON_DESTINATION_URL"&gt;
+		&lt;input type="hidden"	name="e_image_url"		value="COUPON_IMAGE"&gt;
+		&lt;input type="hidden"	name="e_coupon_code"		value="COUPON_CODE"&gt;
+		&lt;input type="hidden"	name="e_expiration_date"	value="EXPIRATION_DATE_OF_COUPON"&gt;
+		&lt;input type="hidden"	name="e_keywords"		value="KEYWORDS DESCRIBING MERCHANT AND COUPON"&gt;
+
+&lt!-- Don't Edit below this line --&gt
+		&ltinput type="image"	name="choice"	value="couponsave" src="http://www.parthamukherjee.com/images/CouponSaveIt/edit_button.png" &gt
+	&lt/form&gt
+		
+	&lt/body&gt
+&lt/html&gt
+	</code></pre>
+	All the folks who have saved this coupon on their wallet will not be able to view, edit or use it anymore.
+	</p>
+	<a href="http://www.parthamukherjee.com/Create/EditNewButtonForm.html">Click to Use the Edit Button Form to edit PayPal Save button</a>
+</body>
+</html>	
+	

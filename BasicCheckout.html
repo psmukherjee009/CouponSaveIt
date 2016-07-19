@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+		<title>Basic ExpressCheckout</title>
+	</head>
+	<body>
+		<div id="home" data-role="page" data-add-back-btn="true">
+			<div data-role="header">
+				<h1>Coupon Redeemer</h1>
+				<a data-role="button" href="http://www.parthamukherjee.com/Overview.html" class="ui-btn-left" rel="external">Overview</a>
+				<a data-role="button" href="http://www.parthamukherjee.com/cgi-perl/GlobalCouponManager5.cgi/RETRIEVE/" class="ui-btn-right" rel="external" >Saved Coupons</a>
+			</div>
+	<div data-role="content">
+		
+		<h3>Demo: Modified Express Checkout With Coupon Redemption</h3>
+
+<strong>How To Read the Demo</strong><br>
+
+1. The SetEC button calls the coupon server to get non-expired coupons, and pass them to the merchant cart (for this demo we did not distinguish merchant to save time)<br>
+2. The merchant cart applies coupons and updates total (simulated in the js pop up)<br>
+3. Merchant cart passes the new $total to the coupon app, and we pass the new amount to EC: you see the success message <br>
+
+		<form method=post action=https://api-3t.sandbox.paypal.com/nvp>
+			<input type=hidden name=USER value=sdk-three_api1.sdk.com>
+			<input type=hidden name=PWD value=QFZCWN5HZM8VBG7Q>
+			<input type=hidden name=SIGNATURE value=A-IzJhZZjhg29XQ2qnhapuwxIDzyAZQ92FRP5dqBzVesOkzbdUONzmOU>
+			<input type=hidden name=VERSION value=94.0>
+			<input type=hidden name=PAYMENTREQUEST_0_PAYMENTACTION value=Sale>
+			<br /><br /><br />
+			Grand Total : <input type=text name=PAYMENTREQUEST_0_AMT value=100 readonly=readonly>
+			<input type=hidden name=RETURNURL value=https://www.OrderDude.com>
+			<input type=hidden name=CANCELURL value=https://www.OrderDude.com>
+			<br /><br /><br /><br />
+			<input type=submit name=METHOD value=SetExpressCheckout src="https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif">
+		</form>
+		<br />
+		
+
+</font>
+	</div>
+	<div data-role="footer"  data-position="fixed">
+		<a data-role="button" href="http://www.paypal.com" class="ui-btn-left" rel="external">PayPal</a>
+		<h4></h4>
+		<a data-role="button" href="http://www.parthamukherjee.com/cgi-perl/GlobalCouponManager5.cgi/LOGOUT/" class="ui-btn-right" rel="external">Logout</a>
+	</div>
+	</body>
+</html>

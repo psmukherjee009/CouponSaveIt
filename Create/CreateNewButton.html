@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>SaveItCoupon_HTML_Form</title>
+  <style> body { margin : 2% 10% } </style>
+</head>
+<body>
+	<div id="header" class="notab">
+		<h1><a href="https://www.paypal.com/us/cgi-bin/webscr?cmd=_home"><img src="https://www.paypal.com/en_US/i/logo/paypal_logo.gif" alt="PayPal" border="0"></a></h1>
+	</div>
+	<a href="http://www.parthamukherjee.com/Overview.html">Back to Overview</a>
+	<font face=&quot;Arial&quot;&gt;&lt;font size=&quot;2&quot;&gt;&lt;>
+<div id="content">
+	<h2>Instructions</h2>
+	<p>
+	To Obtain the PayPal coupon save button <img src="http://www.parthamukherjee.com/images/CouponSaveIt/save_btn_REG.gif"> you need to do the following
+	<ul>
+		<li>Cut and paste the following code into a notepad</li>
+		<li>Replace and fill out all the values which are in CAPS. These value should pertain to the coupon you want to save</li>
+		<li>Copy the code with the replaced values in a file and save as html. </li>
+		<li>Invoke the html file in a browser</li>
+		<li>Press the create button</li>
+	</ul>
+	</p>
+	<br /><strong>Create PayPal Save Button</strong>
+	<pre><code>
+&lt!doctype html&gt
+&lthtml&gt
+	&lthead&gt
+		&ltmeta charset="utf-8"&gt
+		&lttitle&gtCreate PayPal Save Button&lt/title&gt
+	&lt/head&gt
+	&ltbody&gt
+		&ltform action="http://www.parthamukherjee.com/cgi-perl/GlobalCouponManager4.cgi/CREATEBUTTON/" method="POST"&gt
+&lt!-- Don't Edit above this line --&gt
+
+		&lt;input type="hidden"	name="merchant_name"		value="THE_MERCHANT_NAME"&gt;
+		&lt;input type="hidden"	name="merchant_website"		value="THE_MERCHANT_WEBSITE"&gt;
+		&lt;input type="hidden"	name="paypal_merchant_id"	value="PAYPAL_MERCHANT_ID"&gt;		&lt!-- if you don’t know the PayPal merchant ID of the merchant, please keep this field empty --!&gt
+		&lt;input type="hidden"	name="target_url"		value="COUPON_DESTINATION_URL"&gt;
+		&lt;input type="hidden"	name="image_url"		value="COUPON_IMAGE"&gt;
+		&lt;input type="hidden"	name="coupon_code"		value="COUPON_CODE"&gt;
+		&lt;input type="hidden"	name="expiration_date"		value="EXPIRATION_DATE_OF_COUPON"&gt;
+		&lt;input type="hidden"	name="offer_title"		value="TITLE_OF_THE_OFFER"&gt;
+		&lt;input type="hidden"	name="offer_type"		value="5% off or free shipping"&gt;
+		&lt;input type="hidden"	name="redemption_point"		value="ONLINE OFFLINE or BOTH"&gt;
+		&lt;input type="hidden"	name="keywords"			value="KEYWORDS DESCRIBING MERCHANT AND COUPON"&gt;
+
+&lt!-- Don't Edit below this line --&gt
+		&ltinput type="image"	name="choice"	value="couponsave" src="http://www.parthamukherjee.com/images/CouponSaveIt/create_button.gif" &gt
+	&lt/form&gt
+		
+	&lt/body&gt
+&lt/html&gt
+	
+	</code></pre>
+	<a href="CreateNewButtonForm.html">Click to Use the Create Button Form to create PayPal Save button</a>
+	<br />
+</div>
+</body>
+</html

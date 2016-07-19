@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Delete Coupon Button Form</title>
+		<style> body { margin : 2% 10% } table {width : 70%} </style>
+	</head>
+	<body>
+	<div id="header" class="notab">
+		<h1><a href="https://www.paypal.com/us/cgi-bin/webscr?cmd=_home"><img src="https://www.paypal.com/en_US/i/logo/paypal_logo.gif" alt="PayPal" border="0"></a></h1>
+	</div>
+	<p>
+	To delete the PayPal coupon save button <img src="http://www.parthamukherjee.com/images/CouponSaveIt/save_btn_REG.gif"> referred content, you need to provide the PayPal Coupon Id (pp_coupon_id field) and submit.</br></br>
+	Mandatory Fields
+	<ul>
+	<li>PayPal Coupon Id (pp_coupon_id field) is mandatory</li>
+	<li>This PayPal user should be the creator of this coupon button</li>
+	</ul>
+	</p>	
+	<br />
+		<form action="http://www.parthamukherjee.com/cgi-perl/GlobalCouponManager4.cgi/DELETEBUTTON/" method="get">
+			PayPal Coupon Id:<input type="text" name="pp_coupon_id"	value="">
+			<input type="submit" name="Delete" value="Delete Button"> 
+		</form>
+	</body>
+</html>

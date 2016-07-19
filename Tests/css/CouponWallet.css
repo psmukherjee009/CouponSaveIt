@@ -1,0 +1,4 @@
+#container { overflow:auto; }
+.image { width:100px;height:100px;float:left;position:relative; }
+a.delete { display:none;position:absolute;top:0;right:0;width:30px;height:30px;text-indent:-999px;background:red; }
+.image:hover a.delete { display:block; }

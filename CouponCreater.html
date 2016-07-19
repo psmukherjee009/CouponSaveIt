@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>SaveItCoupon_HTML_Form</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+	<title>Coupon Creater</title>
+</head>
+<body>
+	<div id="home" data-role="page" data-add-back-btn="true">
+			<div data-role="header">
+				<h1>Coupon Creator</h1>
+				<a data-role="button" href="http://www.parthamukherjee.com/Overview.html" class="ui-btn-left" rel="external">Overview</a>
+			</div>
+	<div data-role="content">
+	<b>Use the following form to create a "Save" button <img src="http://www.parthamukherjee.com/images/CouponSaveIt/save_btn_REG.gif"></b>
+	<br />
+</p>
+<table>
+	<form action="http://www.parthamukherjee.com/cgi-perl/GlobalCouponManager5.cgi/CREATEBUTTON/" method="GET">
+<!-- Don't Edit above this line -->
+		<tr><td>Merchant Name		</td><td><input type="text" 		name="merchant_name" size="80"></td></tr>
+		<tr><td>Merchant Website 	</td><td><input type="text"		name="merchant_website" size="80"></td></tr>
+		<tr><td>PayPal Merchant ID 	</td><td><input type="text"		name="pp_merchant_id" size="80"></td></tr>
+		<tr><td>Target Url		</td><td><input type="text"		name="target_url" size="80"></td></tr>
+		<tr><td>Image Url		</td><td><input type="text"		name="image_url" size="80"></td></tr>
+		<tr><td>Coupon Code		</td><td><input type="text"		name="coupon_code" size="80"></td></tr>
+		<tr><td>Expiration Date		</td><td><input type="text"		name="expiration_date" size="80"></td></tr>
+		<tr><td>Offer Title		</td><td><input type="text"		name="offer_title" size="80"></td></tr>
+		<tr><td>Offer Type		</td><td><input type="text"		name="offer_type" size="80"></td></tr>
+		<tr><td>Redemption Point	</td><td><input type="text"		name="redemption_point" size="80"></td></tr>
+		<tr><td>Keywords		</td><td><input type="text"		name="keywords" size="80"></td></tr>
+
+<!-- Don't Edit below this line -->
+		<tr><td></td><td><input type="image" name="Create" src="http://www.parthamukherjee.com/images/CouponSaveIt/create_button.gif"></td></tr>
+	
+	</form>
+	</table>	
+
+<br>
+	</div>
+	<div data-role="footer"  data-position="fixed">
+		<a data-role="button" href="http://www.paypal.com" class="ui-btn-left" rel="external">PayPal</a>
+		<h4></h4>
+		<a data-role="button" href="http://www.parthamukherjee.com/cgi-perl/GlobalCouponManager5.cgi/LOGOUT/" class="ui-btn-right" rel="external">Logout</a>
+	</div>
+</body>
+</html>

@@ -1,0 +1,7 @@
+https://www.paypalobjects.com/en_US/Marketing/i/btn/login-with-paypal-button.png
+
+  https://identity.x.com/xidentity/resources/authorize
+   ?scope=https://identity.x.com/xidentity/resources/profile/me
+   &response_type=code
+   &redirect_uri=www.parthamukherjee.com/cgi-perl/GlobalCouponManager2.cgi/LOGINRESPONSE/?id=$enc_id
+   &client_id=a7bcbdb132a896d5557ae7a9c12ab0c2

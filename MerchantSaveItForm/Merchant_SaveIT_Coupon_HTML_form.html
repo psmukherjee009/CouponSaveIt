@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>SaveItCoupon_HTML_Form</title>
+  <style>
+body {
+	padding: 20px 35px;
+	margin: 0;
+	font-family: Arial; 
+	font-size : 115%;
+	color : #808080;
+}
+	  
+  </style>
+</head>
+<body>
+	<div id="header" class="notab">
+		<h1><a href="https://www.paypal.com/us/cgi-bin/webscr?cmd=_home"><img src="https://www.paypal.com/en_US/i/logo/paypal_logo.gif" alt="PayPal" border="0"></a></h1>
+	</div>
+	
+	<p>
+	To Obtain the PayPal coupon save button <img src="http://www.parthamukherjee.com/images/CouponSaveIt/save_btn_REG.gif"> you need to do the following
+	<ul>
+		<li>Cut and paste the following code into a notepad</li>
+		<li>Replace and fill out all the values which are in CAPS. These value should pertain to the coupon you want to save</li>
+		<li>Copy the code with the replaced values and place it after the coupon</li>
+	</ul>
+	</p>
+	<pre><code>
+	&lt;form action="http://www.parthamukherjee.com/cgi-perl/GlobalCouponManager.cgi/SAVE/" method="post"&gt;
+&lt;!-- Don't Edit above this line --&gt;
+
+		&lt;input type="hidden" 		name="merchant_name"		value="MERCHANT NAME"&gt;
+		&lt;input type="hidden"		name="paypal_merchant_id"	value="PAYPAL MERCHANT ID"&gt;
+		&lt;input type="hidden"		name="target_url"		value="COUPON DESTINATION URL"&gt;
+		&lt;input type="hidden"		name="image_url"		value="COUPON IMAGE"&gt;
+		&lt;input type="hidden"		name="coupon_code"		value="COUPON CODE"&gt;
+		&lt;input type="hidden"		name="expiration_date"		value="EXPIRATION DATE OF COUPON in (YYYY-MM-DD) FORMAT"&gt;
+		&lt;input type="hidden"		name="offer_title"		value="EXPLAIN THE COUPON"&gt;
+		&lt;input type="hidden"		name="offer_type"		value="% OFF, $ OFF, FREE SHIPPING ETC"&gt;
+		&lt;input type="hidden"		name="redemption_point"		value="ONLINE OR OFFLINE OR BOTH"&gt;
+		&lt;input type="hidden"		name="keywords"			value="KEYWORDS DESCRIBING MERCHANT AND COUPON"&gt;
+
+&lt;!-- Don't Edit below this line --&gt;
+		&lt;input type="image"	name="choice"	value="couponsave" src="http://www.parthamukherjee.com/images/CouponSaveIt/save_btn_REG.gif" &gt;
+	&lt;/form&gt;
+	</code><pre>
+</body>
+</html>
+

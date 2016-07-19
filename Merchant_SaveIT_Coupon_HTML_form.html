@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>SaveItCoupon_HTML_Form</title>
+  <style> body { margin : 2% 10% } </style>
+</head>
+<body>
+	<div id="header" class="notab">
+		<h1><a href="https://www.paypal.com/us/cgi-bin/webscr?cmd=_home"><img src="https://www.paypal.com/en_US/i/logo/paypal_logo.gif" alt="PayPal" border="0"></a></h1>
+	</div>
+	
+	<p>
+	To Obtain the PayPal coupon save button <img src="http://www.parthamukherjee.com/images/CouponSaveIt/save_btn_REG.gif"> you need to do the following
+	<ul>
+		<li>Cut and paste the following code into a notepad</li>
+		<li>Replace and fill out all the values which are in CAPS. These value should pertain to the coupon you want to save</li>
+		<li>Copy the code with the replaced values in a file and save as html. </li>
+		<li>Invoke the html file in a browser</li>
+		<li>Press the create button</li>
+	</ul>
+	</p>
+	<br /><strong>Create PayPal Save Button</strong>
+	<pre><code>
+&lt!doctype html&gt
+&lthtml&gt
+	&lthead&gt
+		&ltmeta charset="utf-8"&gt
+		&lttitle&gtCreate PayPal Save Button&lt/title&gt
+	&lt/head&gt
+	&ltbody&gt
+		&ltform action="http://www.parthamukherjee.com/cgi-perl/GlobalCouponManager4.cgi/CREATEBUTTON/" method="POST"&gt
+&lt!-- Don't Edit above this line --&gt
+
+		&lt;input type="hidden"	name="merchant_name"		value="THE_MERCHANT_NAME"&gt;
+		&lt;input type="hidden"	name="merchant_website"		value="THE_MERCHANT_WEBSITE"&gt;
+		&lt;input type="hidden"	name="paypal_merchant_id"	value="PAYPAL_MERCHANT_ID"&gt;		&lt!-- if you don’t know the PayPal merchant ID of the merchant, please keep this field empty --!&gt
+		&lt;input type="hidden"	name="target_url"		value="COUPON_DESTINATION_URL"&gt;
+		&lt;input type="hidden"	name="image_url"		value="COUPON_IMAGE"&gt;
+		&lt;input type="hidden"	name="coupon_code"		value="COUPON_CODE"&gt;
+		&lt;input type="hidden"	name="expiration_date"		value="EXPIRATION_DATE_OF_COUPON"&gt;
+		&lt;input type="hidden"	name="offer_title"		value="TITLE_OF_THE_OFFER"&gt;
+		&lt;input type="hidden"	name="offer_type"		value="5% off or free shipping"&gt;
+		&lt;input type="hidden"	name="redemption_point"		value="ONLINE OFFLINE or BOTH"&gt;
+		&lt;input type="hidden"	name="keywords"			value="KEYWORDS DESCRIBING MERCHANT AND COUPON"&gt;
+
+&lt!-- Don't Edit below this line --&gt
+		&ltinput type="image"	name="choice"	value="couponsave" src="http://www.parthamukherjee.com/images/CouponSaveIt/create_button.gif" &gt
+	&lt/form&gt
+		
+	&lt/body&gt
+&lt/html&gt
+	
+	</code></pre>
+	<a href="http://www.parthamukherjee.com/test/CouponSaveIt_Create_Button_Form1_4.html">Click to Use the Create Button Form to create PayPal Save button</a>
+	<br />
+	<h3>View the Coupon</h3> 
+	<p>
+	If you are the owner of the coupon then you can call the API VIEWCOUPON with the pp_coupon_id value.<br />
+	The link can be pasted on browser url with pp_coupon_id filled.<br />
+	<pre><code>
+	http://www.parthamukherjee.com/cgi-perl/GlobalCouponManager4.cgi/VIEWCOUPON/?pp_coupon_id=PAYPAL_COUPON_ID
+	</code></pre>
+	<a href="http://www.parthamukherjee.com/test/CouponSaveIt_View_test1_4.html">Click to Use the View Button Form to view PayPal Save button contents</a>
+	<br />
+	<h3>Edit the Coupon</h3> 
+	<p>
+	If you are the owner of the coupon then you can call the API EDITCOUPON with the pp_coupon_id value and the values to be edited prefixed by "e_".<br />
+	A html link like this will work. You need to have only the fields which you want to modify.<br />
+	<pre><code>
+&lt!doctype html&gt
+&lthtml&gt
+	&lthead&gt
+		&ltmeta charset="utf-8"&gt
+		&lttitle&gtCreate PayPal Save Button&lt/title&gt
+	&lt/head&gt
+	&ltbody&gt
+		&ltform action="http://www.parthamukherjee.com/cgi-perl/GlobalCouponManager4.cgi/EDITBUTTON/" method="POST"&gt
+&lt!-- Don't Edit above this line --&gt
+
+		&lt;input type="hidden" name="pp_coupon_id"		value="PAYPAL_COUPON_ID"&gt;
+		&lt;input type="hidden" name="e_merchant_name"		value="THE_MERCHANT_NAME"&gt;
+		&lt;input type="hidden" name="e_merchant_website"	value="THE_MERCHANT_WEBSITE"&gt;
+		&lt;input type="hidden"	name="e_paypal_merchant_id"	value="PAYPAL_MERCHANT_ID"&gt;
+		&lt;input type="hidden"	name="e_target_url"		value="COUPON_DESTINATION_URL"&gt;
+		&lt;input type="hidden"	name="e_image_url"		value="COUPON_IMAGE"&gt;
+		&lt;input type="hidden"	name="e_coupon_code"		value="COUPON_CODE"&gt;
+		&lt;input type="hidden"	name="e_expiration_date"	value="EXPIRATION_DATE_OF_COUPON"&gt;
+		&lt;input type="hidden"	name="e_keywords"		value="KEYWORDS DESCRIBING MERCHANT AND COUPON"&gt;
+
+&lt!-- Don't Edit below this line --&gt
+		&ltinput type="image"	name="choice"	value="couponsave" src="http://www.parthamukherjee.com/images/CouponSaveIt/edit_button.png" &gt
+	&lt/form&gt
+		
+	&lt/body&gt
+&lt/html&gt
+	</code></pre>
+	All the folks who have saved this coupon on their wallet will not be able to view, edit or use it anymore.
+	</p>
+	<a href="http://www.parthamukherjee.com/test/CouponSaveIt_Edit_test1_4.html">Click to Use the Edit Button Form to edit PayPal Save button</a>
+	
+	<h3>Delete the Coupon from PayPal</h3> 
+	<p>
+	If you are the owner of the coupon then you can call the API DELETEBUTTON with the pp_coupon_id value to delete it.
+	A html link like this will work
+	<pre><code>
+	&lt;a href="http://www.parthamukherjee.com/cgi-perl/GlobalCouponManager.cgi/DELETEBUTTON?pp_coupon_id=PAYPAL_COUPON_ID"&gt;
+	</code></pre>
+	All the folks who have saved this coupon on their wallet will not be able to view, edit or use it anymore.
+	</p>
+	<a href="http://www.parthamukherjee.com/test/CouponSaveIt_Delete_test1_4.html">Click to Use the Delete Button Form to delete PayPal Save button</a>
+	<br />
+	<h3>Few variation you can attempt</h3> 
+	<p>
+	When you register the newly created button, PayPal will send you the coupon id (named pp_coupon_id) embedded in the Psave button.
+	You can manually note the pp_coupon_id's value can use it in your own custom way as
+	<br />In html form it can be used as <br />
+	<br /><strong>POST using the coupon id</strong>
+	<pre><code>
+	&lt;form action="http://www.parthamukherjee.com/cgi-perl/GlobalCouponManager.cgi/SAVE/" method="post"&gt;
+		&lt;input type="hidden" name="pp_coupon_id"		value="PAYPAL_COUPON_ID"&gt;
+	       	src="http://www.parthamukherjee.com/images/CouponSaveIt/save_btn_REG.gif" &gt;
+	&lt;/form&gt;
+	</code></pre>
+	<br /><strong>HTTP Link using the coupon id</strong>
+	<pre><code>
+	&lt;a href="http://www.parthamukherjee.com/cgi-perl/GlobalCouponManager.cgi/SAVE?pp_coupon_id=PAYPAL_COUPON_ID"&gt;
+	</code></pre>
+	</p>
+	
+</body>
+</html>
+

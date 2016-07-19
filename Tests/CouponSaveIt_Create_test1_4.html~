@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>CouponSaveCreation Test1 Page</title>
+	</head>
+	<body>
+		<pre><code>
+		&ltform action="http://www.parthamukherjee.com/cgi-perl/GlobalCouponManager4.cgi/CREATECOUPONSAVEBUTTON/" method="POST"&gt
+&lt!-- Don't Edit above this line --&gt
+
+		&ltinput type="hidden" 		name="merchant_name"		value="Partha Enterprises"&gt
+		&ltinput type="hidden"		name="paypal_merchant_id"	value="63278637826"&gt
+		&ltinput type="hidden"		name="target_url"		value="https://shopping.paypal.com/link?page=home&store=62480&sid=2&conversationId=1811252"&gt
+		&ltinput type="hidden"		name="image_url"		value="https://shopping.paypal.com/image?id=117285"&gt
+		&ltinput type="hidden"		name="coupon_code"		value="AFFI00001"&gt
+		&ltinput type="hidden"		name="expiration_date"		value="2012-08-30"&gt
+		&ltinput type="hidden"		name="offer_title"		value="August Month of Fun"&gt
+		&ltinput type="hidden"		name="offer_type"		value="5% OFF"&gt
+		&ltinput type="hidden"		name="redemption_point"		value="ONLINE"&gt
+		&ltinput type="hidden"		name="keywords"			value="J. Crew Apparal Pants Shirts"&gt
+
+&lt!-- Don't Edit below this line --&gt
+		&ltinput type="image"	name="choice"	value="couponsave" src="http://www.parthamukherjee.com/images/CouponSaveIt/create_button.gif" &gt
+		</pre></code>
+<form action="http://www.parthamukherjee.com/cgi-perl/GlobalCouponManager4.cgi/CREATEBUTTON/" method="POST">
+<!-- Don't Edit above this line -->
+
+		<input type="hidden" 		name="merchant_name"		value="Partha Enterprises">
+		<input type="hidden"		name="paypal_merchant_id"	value="63278637826">
+		<input type="hidden"		name="target_url"		value="https://shopping.paypal.com/link?page=home&store=62480&sid=2&conversationId=1811252">
+		<input type="hidden"		name="image_url"		value="https://shopping.paypal.com/image?id=117285">
+		<input type="hidden"		name="coupon_code"		value="AFFI00001">
+		<input type="hidden"		name="expiration_date"		value="2012-08-30">
+		<input type="hidden"		name="offer_title"		value="August Month of Fun">
+		<input type="hidden"		name="offer_type"		value="5% OFF">
+		<input type="hidden"		name="redemption_point"		value="ONLINE">
+		<input type="hidden"		name="keywords"			value="J. Crew Apparal Pants Shirts">
+
+<!-- Don't Edit below this line -->
+		<input type="image"	name="choice"	value="couponsave" src="http://www.parthamukherjee.com/images/CouponSaveIt/create_button.gif" >
+	</form>
+		
+	</body>
+</html>

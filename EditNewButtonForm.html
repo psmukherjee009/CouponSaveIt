@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+		<script	src="http://www.parthamukherjee.com/scripts/CouponSaveIt/EditButton.js"></script>
+		<title>Edit Coupon</title>
+	</head>
+	<body>
+	<div id="home" data-role="page" data-add-back-btn="true">
+		<div data-role="header">
+			<h1>Edit Coupon</h1>
+			<a data-role="button" href="http://www.parthamukherjee.com/Overview.html" class="ui-btn-left" rel="external">Overview</a>
+			<a data-role="button" href="http://www.parthamukherjee.com/cgi-perl/GlobalCouponManager5.cgi/RETRIEVE/" class="ui-btn-right" rel="external" >Saved Coupons</a>
+		</div>
+		<div data-role="content">
+			<div id="header" class="notab">
+				<h1><a href="https://www.paypal.com/us/cgi-bin/webscr?cmd=_home"><img src="https://www.paypal.com/en_US/i/logo/paypal_logo.gif" alt="PayPal" border="0"></a></h1>
+			</div>
+			<div id="coupon_list">
+				<div id='paste_code'></div>
+					<form id="main_form" action="http://www.parthamukherjee.com/cgi-perl/GlobalCouponManager5.cgi/EDITBUTTON/" method="GET">
+					
+					<!-- Don't Edit above this line -->
+						PayPal Coupon Id	<input type="text" 		name="pp_coupon_id" size="80">
+						Merchant Name		<input type="text" 		name="e_merchant_name" size="80">
+						Merchant Website 	<input type="text"		name="e_merchant_website" size="80">
+						PayPal Merchant Id 	<input type="text"		name="e_pp_merchant_id" size="80">
+						Target Url		<input type="text"		name="e_target_url" size="80">
+						Image Url		<input type="text"		name="e_image_url" size="80">
+						Coupon Code		<input type="text"		name="e_coupon_code" size="80">
+						Expiration Date		<input type="text"		name="e_expiration_date" size="80">
+						Offer Title		<input type="text"		name="e_offer_title" size="80">
+						Offer Type		<input type="text"		name="e_offer_type" size="80">
+						Redemption Point	<input type="text"		name="e_redemption_point" size="80">
+						Keywords		<input type="text"		name="e_keywords" size="80">
+						Creators Email		<input type="text"		name="creator_email" size="80">
+
+					<!-- Don't Edit below this line -->
+						<input type="image" name="Create" src="http://www.parthamukherjee.com/images/CouponSaveIt/edit_button.png" alt="Edit">
+					
+				</form>	
+			</div>
+		</div>
+		<div data-role="footer"  data-position="fixed">
+			<a data-role="button" href="http://www.paypal.com" class="ui-btn-left" rel="external">PayPal</a>
+			<h4></h4>
+			<a data-role="button" href="http://www.parthamukherjee.com/cgi-perl/GlobalCouponManager5.cgi/LOGOUT/" class="ui-btn-right" rel="external">Logout</a>
+		</div>
+	</div>
+	</body>
+</html>
